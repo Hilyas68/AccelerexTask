@@ -66,7 +66,7 @@ public class OpenHourService {
         if (openHoursList.size() > 0) {
             for (int i = 0; i < openHoursList.size(); i++) {
                 if (i == 0 && openHoursList.get(i).getType().equalsIgnoreCase(Type.CLOSE.name())) {
-                    String previousDay = Utils.previousDay(day);
+                    String previousDay = Utils.lookupPreviousDay(day);
                     String value = response.get(previousDay);
                     value = value.concat(" - " + Utils.convertUnixTimeToDate(openHoursList.get(i).getValue()));
 

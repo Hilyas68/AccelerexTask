@@ -14,7 +14,7 @@ public class Utils {
         return dateFormat.format(date);
     }
 
-    public static String previousDay(String day){
+    public static String lookupPreviousDay(String day){
         if(day.equalsIgnoreCase("monday")){
             return "Sunday";
         }if(day.equalsIgnoreCase("tuesday")){
